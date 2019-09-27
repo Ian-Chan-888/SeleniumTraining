@@ -1,0 +1,46 @@
+Lesson 38 Difference between Relative and absolute xpath?/Relative xpath = is a xpath that does not depend on parent nodes
+
+
+example: for http://www.qaclickacademy.com/interview.php
+"//li[@id='tablist1-tab2']"
+		
+Absolute xpath = is a xpath that depends on parent nodes. Where the xpath expression includes the parent node(s).
+example: for http://www.qaclickacademy.com/interview.php 
+"/html[1]/body[1]/section[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[2]"
+		
+		
+dictionary meaning: 
+Absolute XPath :- It starts with the root node or a forward slash (/). The advantage of using absolute is, it identifies the element very fast. ... Relative Xpath :- A relative xpath is one where the path starts from the node of your choice 
+		– it doesn't need to start from the root node.
+		
+
+		
+		
+Sample code for download explaining xpath text/siblings/parent
+
+package Tests;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class testit {
+
+public static void main(String[] args) throws InterruptedException {
+// TODO Auto-generated method stub
+System.setProperty("webdriver.chrome.driver","C:\\work\\chromedriver.exe");
+WebDriver driver =new ChromeDriver();
+driver.get("http://www.qaclickacademy.com/interview.php");
+driver.findElement(By.xpath("//li[text()=' Selenium ']")).click();
+
+driver.findElement(By.xpath("//ul[@class='responsive-tabs__list']/li[1]/following-sibling::li[2]")).click();
+
+System.out.println(driver.findElement(By.xpath(".//*[@id='tablist1-tab2']/parent::ul")).getAttribute("role"));
+//
+
+}
+}

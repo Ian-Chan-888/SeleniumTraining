@@ -1,0 +1,14 @@
+Lesson 42 : CSS Selection locators: 
+
+
+What is the advantage of CSS?
+-faster and more lightweight than xpath.
+
+syntax: tagname[attribute='value']
+
+i.e: for the username field of login.salesforce.com/?locale=ca
+	div[class='identity first']
+	
+	wildcard can be used. *
+	
+	*[class='identity first']

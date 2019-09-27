@@ -1,0 +1,15 @@
+Lesson 46 
+Handling Static drop-downs with "Select" webdriver API
+
+ -- Lesson 47 included which touches on looping
+ 
+ 
+ 46: 
+ 
+ Static drop-downs have all predefined values within the drop-down. 
+ 
+ When a developer writes a drop-down that is drop-down they will use tags like "Select" sub-defined by ??
+ 
+ One needs to define the Select class within the code to run, eg: for www.spiceject.com
+ 
+ Select s= new Select(driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency")));

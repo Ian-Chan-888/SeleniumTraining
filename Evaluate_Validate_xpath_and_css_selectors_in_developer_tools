@@ -1,0 +1,25 @@
+Evaluate and validate XPath/CSS selectors in Chrome Developer Tools
+
+https://yizeng.me/2014/03/23/evaluate-and-validate-xpath-css-selectors-in-chrome-developer-tools/
+
+for xpath: 
+
+		$x(".//header")
+
+for css: 
+
+		$$("header")
+		
+		
+Check: 
+
+If elements are matched, they will be returned in a list. Otherwise an empty list [ ] is shown.
+
+If the XPath or CSS selector is invalid, an exception will be shown in red text. For example:
+
+	$x(".//header/")
+	SyntaxError: Failed to execute 'evaluate' on 'Document': The string './/header/' is not a valid XPath expression.
+
+	$$("header[id=]")
+	SyntaxError: Failed to execute 'querySelectorAll' on 'Document': 'header[id=]' is not a valid selector.
+
