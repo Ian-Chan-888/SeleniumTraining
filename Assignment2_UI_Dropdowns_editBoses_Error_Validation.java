@@ -31,10 +31,12 @@ public class Assignment2_UI_Dropdowns_editBoses_Error_Validation {
 				//1 Childeren
 			driver.findElement(By.xpath("//select[@name='childs']//option[contains(text(),'1')]")).click();
 			
+			
+					
 			/*
-			 * Optionally you can use:
-			 * 	Select select_Adults = new Select (cd.findElement(By.id("Adults")));
-				Select select_Children = new Select (cd.findElement(By.id("Childrens")));
+			 * Optionally you can use is the "Select" Class. which is helpful in a drop down scenario.
+			 * 	Select select_Adults = new Select (driver.findElement(By.id("Adults")));
+				Select select_Children = new Select (driver.findElement(By.id("Childrens")));
 				select_Adults.selectByIndex(1);
 				select_Children.selectByIndex(1);
 			 */
