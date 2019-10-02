@@ -40,6 +40,7 @@ public class Lesson69_Fixing_inconsistent_Locators_and_making_tests_clean {
 		 * To:
 		 * "driver.findElements(By.xpath("//div[@class='product-action']/button")).get(i).click();"
 		 * 
+		 * 
 		 */
 		
 				
