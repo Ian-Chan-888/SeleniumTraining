@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class Lesson53_Radiobutton_cocde_download {
+public class Lesson53_Radiobutton_code_download {
 
 	public static void main(String[] args) throws InterruptedException {
 

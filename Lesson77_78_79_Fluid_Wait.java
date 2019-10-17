@@ -61,12 +61,12 @@ public class Lesson77_78_79_Fluid_Wait {
 		//click on the "Start" button
 		driver.findElement(By.cssSelector("[id='start'] button")).click();
 		
-		//define fluent wait
+		//define fluent wait 30 seconds before exception and Pollig duration of every 3 seconds.
 		Wait<WebDriver> wait=new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(30))
 				.pollingEvery(Duration.ofSeconds(3)).ignoring(NoSuchElementException.class);
 		
 			//creating a method to confirm when element is displayed (overcomes invisible elmements)
-			WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
+			 wait.until(new Function<WebDriver, WebElement>() {
 				public WebElement apply(WebDriver driver) {
 					if (driver.findElement(By.cssSelector("[id='finish'] h4")).isDisplayed())
 							{
