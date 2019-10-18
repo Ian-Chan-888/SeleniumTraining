@@ -24,14 +24,11 @@ public class Lesson82_83_Handlining_Mutiple_Windows {
 		driver.manage().window().maximize();// max browser window
 		driver.manage().deleteAllCookies();
 
-		/*In this lession we talk about Frames or child windows. 
-		 * 
-		 * Frames: 
-		 * What are Frames?
-		 *  -new windows that either open in another tab or subsequent windows of the browser.
-		 * How to Identify Frames in application?
-		 * How to handle frames? 
-		 * Best Practices when working with Frames application.
+		/*In this lession we talk about multiple windows. 
+		 * 1. Identify the id's of each window and set the in a "Set<String>" table
+		 * 2. Use the Iterator<String> to traverse thru the table
+		 * 3. Assign a Variable to each row of the table 
+		 * 4. Use the switchTo().window() to move to the different windows. 
 		 * 
 		 */
 		

@@ -25,7 +25,7 @@ public class LessonX_Template {
 		 * 
 		 * 
 		 *
-		 * 
+		 * info@clickacademy.com -  for email questions
 		 */
 		
 		

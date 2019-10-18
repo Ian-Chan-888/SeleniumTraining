@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 
-public class Assignment3 {
+public class Assignment3_Wait {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 

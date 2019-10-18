@@ -1,15 +1,10 @@
-import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Set;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.apache.commons.io.FileUtils;
-import com.google.common.io.Files;
+
 
 
 public class Assignment4_Window_Handling {
@@ -20,20 +15,22 @@ public class Assignment4_Window_Handling {
 
 		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\eclipse\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("https://the-internet.herokuapp.com/windows");
-		driver.manage().window().maximize();// max browser window
-		driver.manage().deleteAllCookies();
+		driver.get("https://the-internet.herokuapp.com");
+
 
 		/*Handling Windows assignment
-		 * 1. click on Multiple windows
+		 * 1. Click on Multiple windows
 		 * 2. Click on the "Click Here" to start a new window. 
-		 * 3. Capture the text in the new window "New Window"
-		 * 4. Switch back to Parent window and capture the text in that window "Opening a new window"
+		 * 3. Capture the text in the new window. Expected results = "New Window"
+		 * 4. Switch back to Parent window and capture the text in that window. Expected results = "Opening a new window"
 		 * 
 		 */
 		
+		//click on the "Multiple Windows"
+		driver.findElement(By.linkText("Multiple Windows")).click();
+		
 		//click on the "Click here" link
-		driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[1]/a[1]")).click();
+		driver.findElement(By.linkText("Click Here")).click();
 				
 		// this will get all the window id's "titles" using the "Set<String>" function which will store a series of rows where row 1 will be the Parent id.
 		Set<String>ids=driver.getWindowHandles(); 
@@ -44,14 +41,12 @@ public class Assignment4_Window_Handling {
 		String firstChildid=it.next(); //traverses down one next id and stores it into the variable "fristChildid'
 		
 		driver.switchTo().window(firstChildid); //now we can switch to the first child window. 
-		System.out.println(driver.getTitle()); // after switching to the child window we can get the title which should be "Google Account Help"
-
-		driver.switchTo().window(parentid); //switching back to parent window 
-		System.out.println(driver.getTitle()); // after switching to the parent window we can get the title which should be "Create your Google Account"
+		System.out.println("The Text in the Child window is: " + driver.findElement(By.cssSelector("body:nth-child(2) div.example > h3:nth-child(1)")).getText());
 		
-		System.out.println("END PROGRAM");
-
-		// driver.close();
+		driver.switchTo().window(parentid); //switching back to parent window 
+		System.out.println("The Text in the Parent window is: " + driver.findElement(By.cssSelector("body:nth-child(2) div.row:nth-child(2) div.large-12.columns:nth-child(2) div.example > h3:nth-child(1)")).getText()); 
+		
+	
 
 	}
 	
