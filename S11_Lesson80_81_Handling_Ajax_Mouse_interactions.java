@@ -12,7 +12,7 @@ import org.apache.commons.io.FileUtils;
 import com.google.common.io.Files;
 
 
-public class Lesson80_81_Handling_Ajax_Mouse_interactions {
+public class S11_Lesson80_81_Handling_Ajax_Mouse_interactions {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 

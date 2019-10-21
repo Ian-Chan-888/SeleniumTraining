@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class Xpath_Parent_child_Traverse_36 {
+public class S07_Lesson38_Xpath_Parent_child_Traverse_36 {
 
 	public static void main(String[] args) {
 

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class Lesson54_Handling_Checkbox_and_getting_the_size_of_then_with_Selenium {
+public class S08_Lesson54_Handling_Checkbox_and_getting_the_size_of_then_with_Selenium {
 
 	public static void main(String[] args) throws InterruptedException {
 
@@ -18,9 +18,7 @@ public class Lesson54_Handling_Checkbox_and_getting_the_size_of_then_with_Seleni
 			driver.manage().window().maximize();//max browser window
 
 		
-		
-		try {
-			Thread.sleep(2000);
+
 			WebElement From=driver.findElement(By.xpath("//input[@id='origin-search']"));		
 			From.click();
 			
@@ -30,15 +28,10 @@ public class Lesson54_Handling_Checkbox_and_getting_the_size_of_then_with_Seleni
 			From.sendKeys("vA");
 			From.sendKeys(Keys.ARROW_DOWN);
 			From.sendKeys(Keys.ENTER);
-		} catch (Exception e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+
 		
 		
-		
-		
-		try {
+
 			WebElement To=driver.findElement(By.xpath("//input[@id='destination-search']"));
 			//clear field
 			driver.findElement(By.xpath("//form[@id='book-flight-form']//div[@class='col-xs-12 col-smv-6 col-lgv-12 wrapper airport destination']//button[@class='clear']")).click();
@@ -48,10 +41,7 @@ public class Lesson54_Handling_Checkbox_and_getting_the_size_of_then_with_Seleni
 			To.sendKeys(Keys.ARROW_DOWN);// toggles to London, ON
 			To.sendKeys(Keys.ARROW_DOWN);// toggles to London, United Kingdom
 			To.sendKeys(Keys.ENTER);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	
 	
 				
 			

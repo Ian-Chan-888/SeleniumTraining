@@ -7,10 +7,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 
-public class Lesson71_72_Implicit_wait {
+public class S10_Lesson73_74_explicit_wait {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 
@@ -18,65 +20,72 @@ public class Lesson71_72_Implicit_wait {
 
 		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\eclipse\\chromedriver.exe");
 		driver = new ChromeDriver();
-		
-		//****IMPLICIT WAIT DEFINED HERE*****
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); /* IMPLICIT Wait being globally defined here. This means that
-		* for every line that is being executed it will wait 5 seconds. unless the DOM loads prior to the 5 seconds.
-		*/
-		
+			
 		String[] itemsNeeded= {"Cucumber","Brocolli","Beetroot"};  // we are defining an array of strings in by listing the items in '{}'. Imprortant to define the array by "String[]"
 		int itemNumber=0; //we know how many items in the above String[] array.
 		
 		driver.get("https://rahulshettyacademy.com/seleniumPractise");
-				driver.manage().window().maximize();// max browser window
+		Thread.sleep(3000);
+		driver.manage().window().maximize();// max browser window
 		driver.manage().deleteAllCookies();
 
 		/* We can use Pauses or waits within the code so we can organically allow elements to properly load. 
 		 * We will need to understand the differnet types of waits.
 		 * 
-		 * Implicit Wait:
-		 * -Globally defines wait by number of  seconds before you throw an expcetion. 
-		 * -Will adhear to DOM were if page loads before set wait time, then the next function can be executed earlier than set time.
-		 *   When would you use this? 
-		 *   -when all load times are known
-		 *  - a problem exisits where your wait times are too short for a specific scenario while another scenario may take longer.
-		 * Lession 72   Explicit Wait: 
+		 * 
+		 *  Explicit Wait: 
+		 * - It is not Global.
 		 * - can be targeted with a specific scenario where the known wait times are acceptable in Scenario 1 but not in Scneario 2... etc
 		 * - This will help you target scenarios where load times are known to be longer.
 		 * - This can help you run custom wait times for known scearios.
 		 * 
+
+		 * Lession 74-75: Practical excercise
 		 * 
-		 * Lession 73: Practical excercise IMPLICIT WAIT
+		 * WebDriverWait w = new WebDriverWait(driver,5); //5 seconds
+			w.until(ExpectedConditions.elementToBeClickable(element)) -- it is to be noted there are several options 
+		 * after 'ExpectedConditions...'
+		 * The most common one used and for the sake of this example we are going to use 
+		 * 'visibilityOfElementLocated(By.cssSelector(locator))'
 		 * 
-		 * *************************************
-		 * Implicit Wait Advantages: 
-		 * Pros: 
-		 * -Readable code/cleaner look as you dont have to define the wait times at the Line level.
+		 * Pros:
+		 * - Can target certain elements to have specific wait times
+		 * - wait is applied only at targeted elements. So no performance issues
 		 * 
-		 * Cons
-		 * - You can possibly hide performance issues.
+		 * Cons: 
+		 * - More code; not as clean.
+		 * 
+		 * 
 		 * 
 		 */
 		
+		//*****Explicit Wait DEFINED *****
+		WebDriverWait w = new WebDriverWait(driver,5); //5 seconds. This can be added to the top of the code and does not neccessarily have to be implemented at this line.
+		//********************************
+		
 		addItems(driver,itemsNeeded); //calling addItems method
-		Lesson71_72_Implicit_wait b = new Lesson71_72_Implicit_wait();
+		S10_Lesson73_74_explicit_wait b = new S10_Lesson73_74_explicit_wait();
 		b.addItems(driver, itemsNeeded);
 		
 		//click on view cart
 		driver.findElement(By.cssSelector("img[alt='Cart']")).click();
 		//Proceed to Checkout
-		driver.findElement(By.xpath("//button[contains(text(),'PROCEED TO CHECKOUT')]")).click(); //given that the text is not dynamic we can use the text xpath.
-		/*
-		 * becuase the IMPLICIT WAIT was defined globally in Line 21 above the next line will succeed. 
-		 * Otherwise we know that the promocode will illicit a "cannot find element" 
-		 */
 				
+		driver.findElement(By.xpath("//button[contains(text(),'PROCEED TO CHECKOUT')]")).click(); //given that the text is not dynamic we can use the text xpath.
+				
+		//*****Explicit Wait Called here*****
 		//Enter in a Promo code 
+		w.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input.promoCode")));
 		driver.findElement(By.cssSelector("input.promoCode")).sendKeys("rahulshettyacademy");
 		//click on Apply button
-		driver.findElement(By.cssSelector("button.promoBtn")).click(); // this function will also require a wait that we already added with the Implicit Wait at Line 21
-		//check if message is properly displayed after the "Apply" button is pressed.
-		System.out.println(driver.findElement(By.cssSelector("span.promoInfo")).getText()); //Expected result is "Promo code applied successfully!"
+		driver.findElement(By.cssSelector("button.promoBtn")).click(); 
+		
+		//*****Explicit Wait Called here*****
+		w.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.promoInfo")));
+
+		System.out.println(driver.findElement(By.cssSelector("span.promoInfo")).getText()); 
+		
+		//Expected result is "Promo code applied successfully!"
 		
 		
 		

@@ -4,7 +4,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
 
-public class Lesson55_checkbox_excercise {
+public class S08_Lesson55_checkbox_excercise {
 
 	public static void main(String[] args) throws InterruptedException {
 

@@ -4,7 +4,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
 
-public class Lesson57_Validating_if_UI_Element_are_disabled_or_enabled_with_Attributes {
+public class S08_Lesson56_Handling_Calendar_UI_in_Travel_Websites_using_Selenium {
 
 	public static void main(String[] args) throws InterruptedException {
 
@@ -41,42 +41,11 @@ public class Lesson57_Validating_if_UI_Element_are_disabled_or_enabled_with_Attr
 				/* NOTE: you can use '.' to state css patterns with a space between the statements. For instance:
 				class="ui-state-default ui-state-highlight ui-state-active" can be written as ".ui-state-default.ui-state-highlight.ui-state-active"
 				 */
-			 
-			
-			
-			
-			
-			
-			
-			// ***************************  NEW  *******************************************************
-			//select round trip 
-			System.out.println(driver.findElement(By.id("Div1")).getAttribute("style")); // get attribute values before we click on the round trip button
-			driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();// click on the round trip button.
-			/*
-			System.out.println(driver.findElement(By.name("ctl00$mainContent$view_date2")).isEnabled()); Note Should retrun True. This may not allways work depending on some websites. In this example
-			spicejet.com maskes this calander to look like it is dissabled(gryed out) however the elment is actually enabled. You can see this by clicking on the calander. So we can use the workaround in
-			The next command.
-			*/
-			//Confirm calendar is greyd out. We will identify the ATTRIBUTE that showes the 'fake' greyed out calendar. That attribute is "style". therefore: 
-			System.out.println(driver.findElement(By.id("Div1")).getAttribute("style"));
-			if(driver.findElement(By.id("Div1")).getAttribute("style").contains("1"))  // this will look at the opacity value where 0.5 displays dissabled where 1 is enabled.
-			{
-				System.out.println("RETRUN DATE calendar is not greyed out aka Enabled.");
-					Assert.assertTrue(true);
-			}
-			else
-			{
-				System.out.println("RETRUN DATE calendar is greyed out aka Disabled.");
-				Assert.assertTrue(false);
-				
-			}
 			
 			
 			
 			
 			//Count the number of checkboxes: 
-			
-			
 			
 			System.out.println(driver.findElements(By.cssSelector("input[type='checkbox']")).size());
 			

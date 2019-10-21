@@ -9,7 +9,7 @@ import org.apache.commons.io.FileUtils;
 import com.google.common.io.Files;
 
 
-public class Lesson64_Code_formating_and_Debugging {
+public class S09_Lesson64_Code_formating_and_Debugging {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 

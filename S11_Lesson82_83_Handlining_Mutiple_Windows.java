@@ -12,7 +12,7 @@ import org.apache.commons.io.FileUtils;
 import com.google.common.io.Files;
 
 
-public class Lesson82_83_Handlining_Mutiple_Windows {
+public class S11_Lesson82_83_Handlining_Mutiple_Windows {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 

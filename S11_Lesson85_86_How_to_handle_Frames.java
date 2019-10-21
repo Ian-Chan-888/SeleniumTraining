@@ -7,7 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 
 
 
-public class Lesson85_86_How_to_handle_Frames {
+public class S11_Lesson85_86_How_to_handle_Frames {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 

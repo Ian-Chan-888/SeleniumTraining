@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class Lesson52_Handling_AutoSuggestive_dropdowns_using_Selenium {
+public class S08_Lesson52_Handling_AutoSuggestive_dropdowns_using_Selenium {
 
 	public static void main(String[] args) throws InterruptedException {
 

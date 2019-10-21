@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 
-public class Lesson88_89_90_91_Practice_Exercise_print_the_links_count_in_the_page {
+public class S12_Lesson88_89_90_91_Practice_Exercise_print_the_links_count_in_the_page {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 
@@ -74,7 +74,7 @@ public class Lesson88_89_90_91_Practice_Exercise_print_the_links_count_in_the_pa
 		}
 		
 		/*
-		 * This is my Best guess: 
+		 * This is my Best guess, and it did the same thing as above.
 		 * now navigate to each child window and get the title of each tab.
 		Set<String>ids=driver.getWindowHandles();
 		int idnum=driver.getWindowHandles().size(); //find out how many windows are open

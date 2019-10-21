@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 
 
-public class Lesson65_Adding_Items_into_Cart_Ecommerce {
+public class S09_Lesson65_Adding_Items_into_Cart_Ecommerce {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 

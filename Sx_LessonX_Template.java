@@ -9,7 +9,7 @@ import org.apache.commons.io.FileUtils;
 import com.google.common.io.Files;
 
 
-public class LessonX_Template {
+public class Sx_LessonX_Template {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 

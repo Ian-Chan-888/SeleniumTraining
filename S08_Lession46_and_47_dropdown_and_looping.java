@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-public class Lession46_and_47_dropdown_and_looping {
+public class S08_Lession46_and_47_dropdown_and_looping {
 
 	public static void main(String[] args) throws InterruptedException {
 
@@ -18,7 +18,7 @@ public class Lession46_and_47_dropdown_and_looping {
 		driver.get("http://spicejet.com");//go to url
 		
 		// Example of STATIC drop-down
-		Select s= new Select(driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency")));
+		Select s= new Select(driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency"))); // Using the Select Class
 		s.selectByIndex(3);; //select the USD currency 
 		System.out.println(driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency")).getText());
 		
@@ -30,7 +30,7 @@ public class Lession46_and_47_dropdown_and_looping {
 			
 			
 // Example of Dynamic drop-down + use of loops
-			// Changing the amoutn of Adults option
+			// Changing the amount of Adults option
 			driver.findElement(By.id("divpaxinfo")).click();
 				Thread.sleep(2000L);
 			driver.findElement(By.id("hrefIncAdt")).click();// Incrementing adult button

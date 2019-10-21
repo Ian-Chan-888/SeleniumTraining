@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class Lession50_Parent_Child_relationships_locator_to_Idenify_the_objects_Uniquely {
+public class S08_Lession50_Parent_Child_relationships_locator_to_Idenify_the_objects_Uniquely {
 
 	public static void main(String[] args) throws InterruptedException {
 

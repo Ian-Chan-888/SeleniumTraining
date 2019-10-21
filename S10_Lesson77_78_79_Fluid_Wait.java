@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.Wait;
 
 
 
-public class Lesson77_78_79_Fluid_Wait {
+public class S10_Lesson77_78_79_Fluid_Wait {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 

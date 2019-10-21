@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
 
-public class Lesson58_End_to_End_Automation_using_all_UI_Elements_with_Selenium {
+public class S08_Lesson58_End_to_End_Automation_using_all_UI_Elements_with_Selenium {
 
 	public static void main(String[] args) throws InterruptedException {
 

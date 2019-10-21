@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 
 
-public class Lesson69_Fixing_inconsistent_Locators_and_making_tests_clean {
+public class S09_Lesson69_Fixing_inconsistent_Locators_and_making_tests_clean {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 
