@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 import javax.xml.crypto.dsig.keyinfo.KeyInfo;
@@ -31,12 +32,13 @@ public class Assignment6_Practicce_Excercise {
 		Actions a = new Actions(driver); //defining new Actions class (you will need to import it as part of the Selenium libraries.
 		/*
 		 * In this Assignment : 
-		 * 1. Navigate to QAclickAcademy / practice
-		 * 2. Select any Checkbox Example and then grab the label of the selected checkbox // put the label in a vaiable. // do not hard code text. drive it
-		 *   dynamically for subsequent steps.
-		 * 3. Go to the Dropdown and select the dropdown to match the selected checkbox from step 1. 
-		 * 4. Go the Swith To Alert Example and Enter the variablized text in the edit box. 
-		 * 5. Click on the Alert and then verify if text present grabed from step 2 is present in the popup message. 
+		 * Navigate to QAclickAcademy / practice
+		 * 1. Go to the Web Table Example 
+		 *    - Print the number of rows present  (Expected Result = 11 rows)
+		 *    - Print the number of columns (Expected Result = 3 columns)
+		 * 2. Print the second row of data. (Expected Result = Rahul Shetty, Learn SQL in Practical + Database Testing from Scratch, 25)
+		 * 
+		 * 
 		 * 
 		 * Note: you should not hard code any parts during this assignment. 
 		 * 		 * 
@@ -44,100 +46,64 @@ public class Assignment6_Practicce_Excercise {
 		 * 
 		 */
 		
-		//2. click on Opiton 2 and store the lable in a variable. 
-		driver.findElement(By.xpath("//div[@id='checkbox-example']//label[2]")).click();
-		String checkbox = driver.findElement(By.xpath("//div[@id='checkbox-example']//label[2]")).getText();
-		String Label = checkbox.toLowerCase(); // making checkbox to all lower case to support step 3
-		System.out.println(Label);
-		System.out.println(checkbox);
-		//3.
-		Select s= new Select(driver.findElement(By.xpath("//select[@id='dropdown-class-example']"))); //calling Select Method on dropdown
-		s.selectByValue(Label); /* select the dropdown option from step 2. 
-		NOTE: THIS IS CASE SENSITIVE. However if you use s.selectByVisibleText(arg0); then it is not case senstive */
 		
-		//4 
-		driver.findElement(By.cssSelector("#name")).sendKeys(Label);
+		//1
+		//number of rows
+		int rows = driver.findElements(By.cssSelector("table[class='table-display'] tr")).size();
+		System.out.println("There are " + rows + " rows");
 		
+		//number of coloumns
+		int columns = driver.findElements(By.cssSelector("table[class='table-display'] tr th")).size();
+		System.out.println("There are " + columns + " columns");
 		
-		//5. 
-		driver.findElement(By.cssSelector("#alertbtn")).click(); // click on the Alert
+		//2.
+	
+		// Print the Second row of values; minus the title row
+		String rowname = driver.findElement(By.cssSelector("table[class='table-display'] tr:nth-child(3)")).getText();
+		System.out.println(rowname);
 		
-		String alert = driver.switchTo().alert().getText();
+		System.out.println("\n" + "BONUS Printing all the rows of the table:" + "\n");
 		
-		System.out.println(alert); // print out alert
+		// BONUS section: lets print the whole table
+				
+		int count = rows;
 		
-		if (alert.contains(Label))
+		for (int i=0;i<count;i++)
 		{
-			System.out.println("Alert message success");
+			String rowValues = driver.findElements(By.cssSelector("table[class='table-display'] tr")).get(i).getText();
+			System.out.println("Row " + i + " = " + rowValues);
 		}
-		else
-		System.out.println("Alert message failed");
 		
+		System.out.println("\n" + "Instructor Solution Below:" + "\n");
 		
-		/* Instructor Solution: 
-		 * 
-		 * 		driver.findElement(By.xpath("//*[@id='checkbox-example']/fieldset/label[2]/input")).click();
+		//* Instructor Solution: 
+		 WebElement table=driver.findElement(By.id("product"));
 
-        String opt=driver.findElement(By.xpath("//*[@id='checkbox-example']/fieldset/label[2]")).getText();
 
-        WebElement dropdown=driver.findElement(By.id("dropdown-class-example"));
-
-        Select s=new Select(dropdown);
-
-        s.selectByVisibleText(opt);
-
-        driver.findElement(By.name("enter-name")).sendKeys(opt);
-
-        driver.findElement(By.id("alertbtn")).click();
-
-		String text=  driver.switchTo().alert().getText();
-
-		if(text.contains(opt))
-
-			{
-
-			System.out.println("Alert message success");
-
+			System.out.println(table.findElements(By.tagName("tr")).size());
+			
+			
+			System.out.println(table.findElements(By.tagName("tr")).get(0).findElements(By.tagName("th")).size());
+			
+			
+			List<WebElement> secondrow=table.findElements(By.tagName("tr")).get(2).findElements(By.tagName("td"));
+			
+			
+			System.out.println(secondrow.get(0).getText());
+			
+			
+			System.out.println(secondrow.get(1).getText());
+			
+			
+			System.out.println(secondrow.get(2).getText());
+			
 			}
-
-		else
-
-		System.out.println("Something wrong with execution");
-		 * 
-		 */
+			
+{}
+			
+			
+{
 		
-		/*
-		 * Here is a Student example where he selected Option 3 but the code does not assume option 3 is selected. Instead a loop was created
-		 * where it goes to find which one is selected and then goes to grab the text. 
-		 * 
-		 * driver.findElement(By.id("checkBoxOption3")).click();
-
-			List<WebElement> options=driver.findElements(By.cssSelector("input['type=checkbox']"));
-			
-			for(inti=0;i<options.size();i++)
-			
-			{
-			
-			if(options.get(i).isSelected())
-			
-			{
-			
-			String selected=options.get(i).getText();
-			
-			Select s=new select(driver.findElement(By.id("dropdown-class-example")));
-			
-			s.SelectByIndex(i);
-			
-			driver.findElement(By.id("name")).sendKeys(selected);
-			
-			driver.findElement(By.id("alertbtn")).click();
-			
-			String alertText=driver.switchTo().alert().getText();
-			
-			Assert.assertTrue(alertText.contains(selected));
-
-		 * 
-		 */
 		
 		
 		
