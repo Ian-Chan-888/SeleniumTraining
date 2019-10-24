@@ -1,9 +1,5 @@
 
-import java.util.List;
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -69,6 +65,7 @@ public class S13_Lesson96_TO_99_How_to_handle_table_Grids_in_webpage {
 			WebElement table = driver.findElement(By.cssSelector("div[class='cb-col cb-col-100 cb-ltst-wgt-hdr']"));
 			
 			// -this will grab all the row elements of the row and give you the count of them
+			@SuppressWarnings("unused")
 			int rowcount= table.findElements(By.cssSelector("div[class='cb-col cb-col-100 cb-scrd-itms']")).size();// this statement scope is restriced to only the elements within the "table" defined in the previous line.
 			
 			// -this will give you the count of the 3rd column and give you the count of them

@@ -70,6 +70,7 @@ public class S09_Lesson65_Adding_Items_into_Cart_Ecommerce {
 			/* 1. convert array into ArrayList for easy search. doing it this way saves memory
 			 * 2. check whether name you extracted is present in array List or not			
 			 */
+			@SuppressWarnings("rawtypes")
 			List itemsNeededList= Arrays.asList(itemsNeeded); //step 1
 			
 						

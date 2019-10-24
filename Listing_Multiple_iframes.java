@@ -20,6 +20,7 @@ public class Listing_Multiple_iframes {
 
 		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\eclipse\\chromedriver.exe");
 		driver = new ChromeDriver();
+		@SuppressWarnings("resource")
 		Scanner reader = new Scanner(System.in);
 		System.out.print("Enter a url https://");
 		String url = reader.nextLine();

@@ -1,12 +1,6 @@
-import java.io.File;
 import java.io.IOException;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.apache.commons.io.FileUtils;
-import com.google.common.io.Files;
 
 
 public class S02_Setup_Java_and_Selenium {

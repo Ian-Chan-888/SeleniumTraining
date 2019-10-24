@@ -1,9 +1,7 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.By.ByCssSelector;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
+
 
 public class S08_Lession50_Parent_Child_relationships_locator_to_Idenify_the_objects_Uniquely {
 

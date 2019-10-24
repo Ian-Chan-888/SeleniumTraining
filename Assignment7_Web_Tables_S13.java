@@ -1,23 +1,13 @@
 import java.io.IOException;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
-
-import javax.xml.crypto.dsig.keyinfo.KeyInfo;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
+//Assignment7_Web_Tables
 
-
-public class Assignment6_Practicce_Excercise {
+public class Assignment7_Web_Tables_S13 {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 
@@ -28,8 +18,7 @@ public class Assignment6_Practicce_Excercise {
 		driver.get("https://qaclickacademy.com/practice.php");
 		driver.manage().window().maximize();// max browser window
 		driver.manage().deleteAllCookies();
-		WebDriverWait w = new WebDriverWait(driver,5);
-		Actions a = new Actions(driver); //defining new Actions class (you will need to import it as part of the Selenium libraries.
+
 		/*
 		 * In this Assignment : 
 		 * Navigate to QAclickAcademy / practice
@@ -62,7 +51,7 @@ public class Assignment6_Practicce_Excercise {
 		String rowname = driver.findElement(By.cssSelector("table[class='table-display'] tr:nth-child(3)")).getText();
 		System.out.println(rowname);
 		
-		System.out.println("\n" + "BONUS Printing all the rows of the table:" + "\n");
+		System.out.println("\n" + "BONUS - Printing all the rows of the table:" + "\n");
 		
 		// BONUS section: lets print the whole table
 				
@@ -97,22 +86,18 @@ public class Assignment6_Practicce_Excercise {
 			
 			System.out.println(secondrow.get(2).getText());
 			
-			}
+
 			
-{}
-			
-			
-{
-		
-		
+	
 		
 		
 		
 		System.out.println("END PROGRAM");	
-		}
+		
 
 
 	
+		}
 }
 		
 		

@@ -1,22 +1,13 @@
 import java.io.IOException;
-import java.util.Iterator;
-import java.util.Set;
-
-import javax.xml.crypto.dsig.keyinfo.KeyInfo;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 
+//Assignment6_Practicce_Excercise_S12
 
-public class Assignment7_Web_Tables {
+public class Assignment6_Practicce_Excercise_S12 {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 
@@ -27,8 +18,7 @@ public class Assignment7_Web_Tables {
 		driver.get("https://qaclickacademy.com/practice.php");
 		driver.manage().window().maximize();// max browser window
 		driver.manage().deleteAllCookies();
-		WebDriverWait w = new WebDriverWait(driver,5);
-		Actions a = new Actions(driver); //defining new Actions class (you will need to import it as part of the Selenium libraries.
+
 		/*
 		 * In this Assignment : 
 		 * 1. Navigate to QAclickAcademy / practice

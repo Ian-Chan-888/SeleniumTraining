@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 
 
-public class Assignment4_Window_Handling {
+public class Assignment4_Window_Handling_S11 {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 

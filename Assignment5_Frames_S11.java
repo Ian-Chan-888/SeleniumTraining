@@ -2,11 +2,11 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 
 
 
-public class Assignment5_Frames {
+
+public class Assignment5_Frames_S11 {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 

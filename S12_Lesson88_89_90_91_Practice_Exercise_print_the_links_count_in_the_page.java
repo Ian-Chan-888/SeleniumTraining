@@ -1,15 +1,11 @@
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Set;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 
@@ -24,8 +20,7 @@ public class S12_Lesson88_89_90_91_Practice_Exercise_print_the_links_count_in_th
 		driver.get("https://qaclickacademy.com/practice.php");
 		driver.manage().window().maximize();// max browser window
 		driver.manage().deleteAllCookies();
-		WebDriverWait w = new WebDriverWait(driver,5);
-		Actions a = new Actions(driver); //defining new Actions class (you will need to import it as part of the Selenium libraries.
+
 		/*
 		 * 1. Give me the count of the links on the page.
 		 *  usually links will have a tag of 'a' which stands for anchor

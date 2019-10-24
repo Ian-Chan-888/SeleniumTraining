@@ -67,6 +67,7 @@ public class S09_Lesson69_Fixing_inconsistent_Locators_and_making_tests_clean {
 			/* 1. convert array into ArrayList for easy search. doing it this way saves memory
 			 * 2. check whether name you extracted is present in array List or not			
 			 */
+			@SuppressWarnings("rawtypes")
 			List itemsNeededList= Arrays.asList(itemsNeeded); //step 1
 			
 						

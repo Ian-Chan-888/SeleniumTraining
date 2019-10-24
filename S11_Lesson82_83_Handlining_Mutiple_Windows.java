@@ -1,15 +1,10 @@
-import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Set;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.apache.commons.io.FileUtils;
-import com.google.common.io.Files;
+
 
 
 public class S11_Lesson82_83_Handlining_Mutiple_Windows {

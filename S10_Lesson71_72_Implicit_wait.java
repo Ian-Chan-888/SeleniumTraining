@@ -25,7 +25,7 @@ public class S10_Lesson71_72_Implicit_wait {
 		*/
 		
 		String[] itemsNeeded= {"Cucumber","Brocolli","Beetroot"};  // we are defining an array of strings in by listing the items in '{}'. Imprortant to define the array by "String[]"
-		int itemNumber=0; //we know how many items in the above String[] array.
+		//int itemNumber=0; //we know how many items in the above String[] array.
 		
 		driver.get("https://rahulshettyacademy.com/seleniumPractise");
 				driver.manage().window().maximize();// max browser window
@@ -59,8 +59,8 @@ public class S10_Lesson71_72_Implicit_wait {
 		 */
 		
 		addItems(driver,itemsNeeded); //calling addItems method
-		S10_Lesson71_72_Implicit_wait b = new S10_Lesson71_72_Implicit_wait();
-		b.addItems(driver, itemsNeeded);
+		//S10_Lesson71_72_Implicit_wait b = new S10_Lesson71_72_Implicit_wait();
+		// b.addItems(driver, itemsNeeded);
 		
 		//click on view cart
 		driver.findElement(By.cssSelector("img[alt='Cart']")).click();
@@ -105,8 +105,9 @@ public class S10_Lesson71_72_Implicit_wait {
 					/* 1. convert array into ArrayList for easy search. doing it this way saves memory
 					 * 2. check whether name you extracted is present in array List or not			
 					 */
+					@SuppressWarnings("rawtypes")
 					List itemsNeededList= Arrays.asList(itemsNeeded); //step 1
-					
+				
 								
 					if(itemsNeededList.contains(formattedName)) //step 2
 					{

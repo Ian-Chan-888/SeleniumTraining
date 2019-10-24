@@ -1,9 +1,6 @@
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -47,6 +44,7 @@ public class S12_Lesson93_94_95_96_Handling_calendar_UI_In_Travel_websites {
 		//Navigate to date		
 		
 		
+		@SuppressWarnings("unused")
 		List<WebElement> dates=driver.findElements(By.className("day"));
 		int count = driver.findElements(By.className("day")).size(); //counts the number of emlements with "day" as being the common attribute
 		

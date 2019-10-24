@@ -6,7 +6,6 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.apache.commons.io.FileUtils;
-import com.google.common.io.Files;
 
 
 public class S09_Lesson64_Code_formating_and_Debugging {

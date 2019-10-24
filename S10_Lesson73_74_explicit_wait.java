@@ -1,8 +1,6 @@
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,7 +20,7 @@ public class S10_Lesson73_74_explicit_wait {
 		driver = new ChromeDriver();
 			
 		String[] itemsNeeded= {"Cucumber","Brocolli","Beetroot"};  // we are defining an array of strings in by listing the items in '{}'. Imprortant to define the array by "String[]"
-		int itemNumber=0; //we know how many items in the above String[] array.
+		//int itemNumber=0; //we know how many items in the above String[] array.
 		
 		driver.get("https://rahulshettyacademy.com/seleniumPractise");
 		Thread.sleep(3000);
@@ -64,8 +62,9 @@ public class S10_Lesson73_74_explicit_wait {
 		//********************************
 		
 		addItems(driver,itemsNeeded); //calling addItems method
+		@SuppressWarnings("unused")
 		S10_Lesson73_74_explicit_wait b = new S10_Lesson73_74_explicit_wait();
-		b.addItems(driver, itemsNeeded);
+		S10_Lesson73_74_explicit_wait.addItems(driver, itemsNeeded);
 		
 		//click on view cart
 		driver.findElement(By.cssSelector("img[alt='Cart']")).click();
@@ -114,6 +113,7 @@ public class S10_Lesson73_74_explicit_wait {
 					/* 1. convert array into ArrayList for easy search. doing it this way saves memory
 					 * 2. check whether name you extracted is present in array List or not			
 					 */
+					@SuppressWarnings("rawtypes")
 					List itemsNeededList= Arrays.asList(itemsNeeded); //step 1
 					
 								
