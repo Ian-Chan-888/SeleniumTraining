@@ -71,7 +71,7 @@ public class Assignment7_Web_Tables_S13 {
 
 			System.out.println(table.findElements(By.tagName("tr")).size());
 			
-			
+			//print the number of columns from row 0
 			System.out.println(table.findElements(By.tagName("tr")).get(0).findElements(By.tagName("th")).size());
 			
 			
