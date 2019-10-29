@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-public class S13_Lesson96_TO_99_How_to_handle_table_Grids_in_webpage {
+public class S13_Lesson096_TO_99_How_to_handle_table_Grids_in_webpage {
 
 	
 	
