@@ -61,7 +61,7 @@ public class S15_Lesson116_DesiredCapabilities_and_RemoteWebdriver_importance {
 				
 				
 			System.out.println("End Program");
-			
+			driver.close();
 }
 
 }
