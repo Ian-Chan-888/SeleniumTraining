@@ -12,7 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-public class S14_Lesson111_Descending_order_Validataion_strategy_using_Collections_framework {
+public class S14_Lesson111_112_Descending_order_Validataion_strategy_using_Collections_framework {
 
 	
 	
