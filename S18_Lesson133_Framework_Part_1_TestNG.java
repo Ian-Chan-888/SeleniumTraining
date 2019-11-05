@@ -73,7 +73,7 @@ public class S18_Lesson133_Framework_Part_1_TestNG {
 	
 		
   @Test
-	public static void main(String[] args) throws MalformedURLException {
+	public void TestNG() throws MalformedURLException {
 
 		WebDriver driver;
 
