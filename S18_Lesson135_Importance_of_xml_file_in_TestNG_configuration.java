@@ -23,19 +23,22 @@ public class S18_Lesson135_Importance_of_xml_file_in_TestNG_configuration {
 	 * ******************************* Test NG Tutorial
 	 * 
 	 * Importance of TestNG Installation and configuration in Eclipse
-	 * (https://testng.org/doc/download.html) Testing XML file Importance - Allows
+	 * (https://testng.org/doc/download.html) 
+	 * 
+	 * Testing XML file Importance - Allows
 	 * you to define and control a suite of tests within a project - configurations
 	 * in xml can be used -right click on Project / TestNG / convert to TestNG -
 	 * this will create a test.xml which reads like this :
 	 * 
-	 * <?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE suite SYSTEM
-	 * "https://testng.org/testng-1.0.dtd"> <suite name="Suite"> <test
-	 * thread-count="5" name="Test"> <classes> <class
-	 * name=".S18_Lesson134_Running_Test_Cases_in_TestNG_with_out_java_compiler"/>
-	 * <class name=".S18_Lesson135_Importance_of_xml_file_in_TestNG_configuration"/>
-	 * <class name=".S18_Lesson133_Framework_Part_1_TestNG"/> </classes> </test>
-	 * <!-- Test --> </suite> <!-- Suite -->
-	 * 
+	 * <?xml version="1.0" encoding="UTF-8"?>
+		<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+		<suite name="Suite">
+		  <test name="Test">
+		    <classes>
+		      <class name=".S18_Lesson136_Prioritizing_the_Testcases_with_TestNG"/>
+		    </classes>
+		  </test> <!-- Test -->
+		</suite> <!-- Suite -->
 	 * 
 	 * 'import org.testng.annotations.Test;' 'Add TestNG library'
 	 * 
