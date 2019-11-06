@@ -25,7 +25,7 @@ public class S18_Lesson136_Prioritizing_the_Testcases_with_TestNG {
 	 * 
 	 * 
 	 * You can control which tests to run by removing or adding the names of the tests. and classes within the tests in the xml : 
-	 * for the next examples view the tests in the 'test' project
+	 * 
 	 * 
 	 * <?xml version="1.0" encoding="UTF-8"?>
 			<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
@@ -60,25 +60,7 @@ public class S18_Lesson136_Prioritizing_the_Testcases_with_TestNG {
 	 * 
 	 */
 
-	@Test 
-	public void WebloginCarLoan() {
-
-		//add some code here
-		System.out.println("WebloginCarLoan");
-	}
-
-	@Test 
-	public void MobileLogincarLoan() {
-
-		//Appium code 
-		System.out.println("MobileLogincarLoan");
-	}
 	
-	@Test 
-	public void LoginAPIcarLoan() {
-
-		//REST API code 
-		System.out.println("LoginAPIcarLoan");
 		
 	}
 
