@@ -25,7 +25,7 @@ public class S18_Lesson136_Prioritizing_the_Testcases_with_TestNG {
 	 * 
 	 * 
 	 * You can control which tests to run by removing or adding the names of the tests. and classes within the tests in the xml : 
-	 * 
+	 * for the next examples view the tests in the 'test' project
 	 * 
 	 * <?xml version="1.0" encoding="UTF-8"?>
 			<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
@@ -42,6 +42,21 @@ public class S18_Lesson136_Prioritizing_the_Testcases_with_TestNG {
 
 	 * 
 	 * - This xml example from the 'test' project you can see that the suite will run 9 test cases 
+	 *   [RemoteTestNG] detected TestNG version 7.0.0
+						Day 3 (test1)
+						Day 3 (test2)
+						Day 3 (test3)
+						Day2 (test1)
+						Day2 (test2)
+						Day 4 (test1)
+						Day 4 (test2)
+						Day 4 (test3)
+						Day1 (test1)
+						
+						===============================================
+						Suite
+						Total tests run: 9, Passes: 9, Failures: 0, Skips: 0
+						===============================================
 	 * 
 	 */
 
