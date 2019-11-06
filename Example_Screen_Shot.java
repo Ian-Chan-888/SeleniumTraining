@@ -7,8 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.apache.commons.io.FileUtils;
 
-
-
 public class Example_Screen_Shot {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
@@ -19,10 +17,12 @@ public class Example_Screen_Shot {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();// max browser window
 		driver.manage().deleteAllCookies();
-		
+
 		driver.get("http://google.com");
-		driver.findElement(By.xpath("//body[@id='gsr']/div[@id='viewport']/div[@id='main']/span[@id='body']/center/div[@id='lga']/div[@id='hplogo']/a/img[1]")).click();
-		
+		driver.findElement(By.xpath(
+				"//body[@id='gsr']/div[@id='viewport']/div[@id='main']/span[@id='body']/center/div[@id='lga']/div[@id='hplogo']/a/img[1]"))
+				.click();
+
 		getScreenshot(driver);
 
 		System.out.println("END PROGRAM");
@@ -30,15 +30,12 @@ public class Example_Screen_Shot {
 		// driver.close();
 
 	}
-	
-	public static void getScreenshot(WebDriver driver) throws IOException
-	{
-		
-		File src=  ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(src,new File("C:\\Users\\ION64-2017\\Desktop\\screen shots\\file.jpg"));
-		
+
+	public static void getScreenshot(WebDriver driver) throws IOException {
+
+		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(src, new File("C:\\Users\\ION64-2017\\Desktop\\screen shots\\file.jpg"));
+
 	}
-	
-	
-	
+
 }

@@ -8,7 +8,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.apache.commons.io.FileUtils;
 import com.google.common.io.Files;
 
-
 public class Sx_LessonX_Template {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
@@ -25,19 +24,13 @@ public class Sx_LessonX_Template {
 		 * 
 		 * 
 		 *
-		 * info@clickacademy.com -  for email questions
+		 * info@clickacademy.com - for email questions
 		 */
-		
-		
 
 		System.out.println("END PROGRAM");
 
 		// driver.close();
 
 	}
-	
-	
-	
-	
-	
+
 }

@@ -10,22 +10,21 @@ public class S08_Lesson52_Handling_AutoSuggestive_dropdowns_using_Selenium {
 
 		WebDriver driver;
 
-			System.setProperty("webdriver.chrome.driver","C:\\Program Files\\eclipse\\chromedriver.exe");
-			driver = new ChromeDriver();
-			driver.get("https://www.westjet.com"); //URL in the browser
-			driver.manage().window().maximize();//max browser window
+		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\eclipse\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("https://www.westjet.com"); // URL in the browser
+		driver.manage().window().maximize();// max browser window
 
-			
-		
-		
 		try {
 			Thread.sleep(2000);
-			WebElement From=driver.findElement(By.xpath("//input[@id='origin-search']"));		
+			WebElement From = driver.findElement(By.xpath("//input[@id='origin-search']"));
 			From.click();
-			
-			//clear field
-			driver.findElement(By.xpath("//form[@id='book-flight-form']//div[@class='col-xs-12 col-smv-6 col-lgv-12 wrapper airport origin']//i[@class='stamp remove-sign']")).click();
-			
+
+			// clear field
+			driver.findElement(By.xpath(
+					"//form[@id='book-flight-form']//div[@class='col-xs-12 col-smv-6 col-lgv-12 wrapper airport origin']//i[@class='stamp remove-sign']"))
+					.click();
+
 			From.sendKeys("vA");
 			From.sendKeys(Keys.ARROW_DOWN);
 			From.sendKeys(Keys.ENTER);
@@ -33,15 +32,14 @@ public class S08_Lesson52_Handling_AutoSuggestive_dropdowns_using_Selenium {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		
-		
-		
-		
+
 		try {
-			WebElement To=driver.findElement(By.xpath("//input[@id='destination-search']"));
-			//clear field
-			driver.findElement(By.xpath("//form[@id='book-flight-form']//div[@class='col-xs-12 col-smv-6 col-lgv-12 wrapper airport destination']//button[@class='clear']")).click();
-			
+			WebElement To = driver.findElement(By.xpath("//input[@id='destination-search']"));
+			// clear field
+			driver.findElement(By.xpath(
+					"//form[@id='book-flight-form']//div[@class='col-xs-12 col-smv-6 col-lgv-12 wrapper airport destination']//button[@class='clear']"))
+					.click();
+
 			To.sendKeys("london");
 			Thread.sleep(2000);
 			To.sendKeys(Keys.ARROW_DOWN);// toggles to London, ON
@@ -51,14 +49,10 @@ public class S08_Lesson52_Handling_AutoSuggestive_dropdowns_using_Selenium {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	
-				
-			
-			
-			System.out.println("END PROGRAM");
-		
-			
-			//driver.close();
-			
-		}
+
+		System.out.println("END PROGRAM");
+
+		// driver.close();
+
+	}
 }
